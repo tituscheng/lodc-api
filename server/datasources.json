@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "psql": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "lodc_dev",
+    "username": "lodcmedia",
+    "password": "ilovejesus",
+    "name": "psql",
+    "connector": "postgresql",
+    "debug": true
+  }
+}

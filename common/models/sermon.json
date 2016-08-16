@@ -1,0 +1,49 @@
+{
+  "name": "sermon",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "title": {
+      "type": "object",
+      "required": true
+    },
+    "description": {
+      "type": "object"
+    },
+    "scripture": {
+      "type": "object",
+      "required": true
+    },
+    "speaker": {
+      "type": "object",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": false
+    },
+    "created": {
+      "type": "date",
+      "required": true
+    },
+    "updated": {
+      "type": "date",
+      "required": true
+    },
+    "media": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
