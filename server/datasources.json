@@ -4,11 +4,11 @@
     "connector": "memory"
   },
   "psql": {
-    "host": "localhost",
+    "host": "lodc-dev.cuyqog5dyvi5.us-west-2.rds.amazonaws.com",
     "port": 5432,
     "database": "lodc_dev",
     "username": "lodcmedia",
-    "password": "ilovejesus",
+    "password": "ilovejesus2016",
     "name": "psql",
     "connector": "postgresql",
     "debug": true

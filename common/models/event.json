@@ -8,8 +8,8 @@
   "properties": {
     "id": {
       "type": "string",
-      "required": true,
-      "id":true
+      "id": true,
+      "required": true
     },
     "title": {
       "type": "object",
@@ -19,7 +19,7 @@
       "type": "date",
       "required": true
     },
-    "enddate":{
+    "enddate": {
       "type": "date",
       "required": true
     },

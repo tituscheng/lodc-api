@@ -57,12 +57,15 @@ module.exports = function(Sermon) {
     logger.debug("date: ", date);
 
     Sermon.create({
+      "id":shortid.generate(),
       "title": title,
       "description": description,
       "scripture": scripture,
       "speaker": speaker,
       "date": new Date(date),
-      "medias": media
+      "medias": media,
+      created: Date.now(),
+      updated: Date.now()
     }, function(err, sermon) {
       if (err) {
         //logger.info("Sermon.createNewSermon failed in sermon.js located in /common/models: ", err);
@@ -72,6 +75,17 @@ module.exports = function(Sermon) {
       }
     });
   };
+
+  Sermon.getMonths = function(cb, callback) {
+    logger.info("Getting months from database");
+    Sermon.find({field:["created"]}, function(err, sermons){
+      if(err) {
+        logger.error("Sermon.find failed in Sermon.getMonths: ", err);
+      } else {
+
+      }
+    });
+  }
 
 
 

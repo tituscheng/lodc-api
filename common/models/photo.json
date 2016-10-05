@@ -1,5 +1,5 @@
 {
-  "name": "news",
+  "name": "photo",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -8,18 +8,12 @@
   "properties": {
     "id": {
       "type": "string",
-      "id": true,
+      "required": true,
+      "id": true
+    },
+    "name": {
+      "type": "string",
       "required": true
-    },
-    "title": {
-      "type": "object",
-      "required": true
-    },
-    "content": {
-      "type": "object"
-    },
-    "date": {
-      "type": "date"
     },
     "created": {
       "type": "date",
@@ -27,6 +21,20 @@
     },
     "updated": {
       "type": "date",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string"
+    },
+    "thumbnail_url": {
+      "type": "string"
+    },
+    "album_id": {
+      "type": "string",
       "required": true
     }
   },

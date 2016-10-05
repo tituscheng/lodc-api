@@ -144,3 +144,4 @@ module.exports = function(Lodc) {
     http: {verb: "post", path: "/sermon/add"}
   });
 };
+

@@ -1,5 +1,5 @@
 {
-  "name": "news",
+  "name": "album",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -8,18 +8,15 @@
   "properties": {
     "id": {
       "type": "string",
-      "id": true,
-      "required": true
+      "required": true,
+      "id":true
     },
     "title": {
-      "type": "object",
+      "type": "string",
       "required": true
     },
-    "content": {
-      "type": "object"
-    },
-    "date": {
-      "type": "date"
+    "description": {
+      "type": "string"
     },
     "created": {
       "type": "date",

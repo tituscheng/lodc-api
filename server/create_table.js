@@ -7,7 +7,10 @@ var models = [
   "sermon",
   "prayer",
   "news",
-  "event"
+  "event",
+  "email",
+  "photo",
+  "album"
 ];
 
 models.forEach(function(modelName) {

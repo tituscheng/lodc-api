@@ -1,5 +1,5 @@
 {
-  "name": "news",
+  "name": "email",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,21 +11,20 @@
       "id": true,
       "required": true
     },
-    "title": {
-      "type": "object",
+    "to": {
+      "type": "string",
       "required": true
     },
-    "content": {
-      "type": "object"
+    "name": {
+      "type": "string"
     },
-    "date": {
-      "type": "date"
+    "contactemail": {
+      "type": "string"
     },
-    "created": {
-      "type": "date",
-      "required": true
+    "message": {
+      "type": "string"
     },
-    "updated": {
+    "received_date": {
       "type": "date",
       "required": true
     }
