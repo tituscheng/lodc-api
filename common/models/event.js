@@ -52,6 +52,36 @@ module.exports = function(Event) {
     });
   }
 
+  Event.getLatestEvents = function(cb) {
+    logger.info("Getting the latest events");
+    var today = new Date();
+    var eventQuery = {
+      where: {
+        startdate: {
+          gte: today
+        }
+      },
+      limit: 3,
+      order: "startdate ASC"
+    }
+    Event.find(eventQuery, function(err, events){
+      if(err) {
+        cb(err);
+      } else {
+        cb(null, events);
+      }
+    })
+  //  var sql = "SELECT * FROM public.event WHERE extract(MONTH FROM startdate)=" + month + " AND extract(DAY FROM startdate) >=" + day + " ORDER BY startdate ASC LIMIT 3"
+    // logger.info("sql: " + sql);
+    // var ds = Event.dataSource;
+    // ds.connector.query(sql, function(err, results){
+    //   if(err) {
+    //     cb(err);
+    //   } else {
+    //     cb(null, results);
+    //   }
+    // });
+  }
 
   Event.createNewEvent = function(title, content, startdate, enddate, cb) {
     logger.info("Creating a new event for '%s'", title);

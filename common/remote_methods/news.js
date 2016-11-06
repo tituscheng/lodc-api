@@ -11,9 +11,9 @@ module.exports = function(Lodc) {
     });
   };
 
-  Lodc.addNews = function(title, content, date, cb) {
+  Lodc.addNews = function(title, content, date, category, cb) {
     logger.info("Lodc.addNews started...");
-    Lodc.app.models.news.createNewNews(title, content, date, function(err, news){
+    Lodc.app.models.news.createNewNews(title, content, date, category, function(err, news){
       if(err) {
         cb(err);
       } else {
@@ -91,7 +91,10 @@ module.exports = function(Lodc) {
       type: "object"
     }, {
       arg: "date",
-      type: "string",
+      type: "string"
+    }, {
+      arg: "category",
+      type: "string"
     }],
     returns: {
       arg:"data",

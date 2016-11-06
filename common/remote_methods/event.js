@@ -11,6 +11,8 @@ module.exports = function(Lodc) {
     });
   };
 
+
+
   Lodc.addEvent = function(title, content, startdate, enddate, cb) {
     logger.info("Lodc.addEvent started...");
     Lodc.app.models.event.createNewEvent(title, content, startdate, enddate, function(err, event){
@@ -109,4 +111,27 @@ module.exports = function(Lodc) {
     },
     http: {verb: "post", path: "/event/add"}
   });
+
+  Lodc.getLatestEvents = function(cb) {
+    Lodc.app.models.event.getLatestEvents(function(err, events){
+      if(err) {
+        cb(err);
+      } else {
+        cb(null, {data: events});
+      }
+    })
+  }
+
+  Lodc.remoteMethod("getLatestEvents", {
+    description: "Get latest events",
+    isStatic: true,
+    returns: {
+      arg: "data",
+      type: "array",
+      root: true
+    },
+    http: {verb: "get", path: "/event/latest"}
+  })
 };
+
+

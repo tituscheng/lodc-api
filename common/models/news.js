@@ -50,7 +50,7 @@ module.exports = function(News) {
   }
 
 
-  News.createNewNews = function(title, content, date, cb) {
+  News.createNewNews = function(title, content, date, category, cb) {
     logger.info("Creating a new news for '%s'", title);
     logger.debug("date: ", date);
     News.create({
@@ -58,6 +58,7 @@ module.exports = function(News) {
       "title": title,
       "content": content,
       "date": new Date(date),
+      "category": category,
       "created": new Date(),
       "updated": new Date()
     }, function(err, news) {
