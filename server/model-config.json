@@ -64,5 +64,9 @@
   "album": {
     "dataSource": "psql",
     "public": false
+  },
+  "special": {
+    "dataSource": "psql",
+    "public": false
   }
 }

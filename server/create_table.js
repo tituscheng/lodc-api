@@ -10,7 +10,8 @@ var models = [
   "event",
   "email",
   "photo",
-  "album"
+  "album",
+  "special"
 ];
 
 models.forEach(function(modelName) {
