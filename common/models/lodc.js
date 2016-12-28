@@ -8,4 +8,5 @@ module.exports = function(Lodc) {
 	require("../remote_methods/email")(Lodc);
 	require("../remote_methods/album")(Lodc);
 	require("../remote_methods/special")(Lodc);
+	require("../remote_methods/webcontent")(Lodc);
 };

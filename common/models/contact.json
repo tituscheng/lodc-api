@@ -1,5 +1,5 @@
 {
-  "name": "special",
+  "name": "contact",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,30 +11,21 @@
       "id": true,
       "required": true
     },
-    "link": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "updated": {
-      "type": "date",
-      "required": true
-    },
-    "created": {
-      "type": "date",
-      "required": true
-    },
-    "title": {
-      "type": "object",
-      "required": true
-    },
-    "description": {
-      "type": "object"
-    },
-    "category": {
+    "birthday": {
       "type": "string"
     },
-    "event_date": {
-      "type": "date",
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "category": {
+      "type": "number",
       "required": true
     }
   },

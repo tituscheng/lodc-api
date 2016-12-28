@@ -68,5 +68,13 @@
   "special": {
     "dataSource": "psql",
     "public": false
+  },
+  "contact": {
+    "dataSource": "psql",
+    "public": false
+  },
+  "webcontent": {
+    "dataSource": "psql",
+    "public": false
   }
 }

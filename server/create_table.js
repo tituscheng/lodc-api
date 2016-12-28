@@ -11,7 +11,9 @@ var models = [
   "email",
   "photo",
   "album",
-  "special"
+  "special",
+  "contact",
+  "webcontent"
 ];
 
 models.forEach(function(modelName) {

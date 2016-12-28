@@ -1,5 +1,5 @@
 {
-  "name": "special",
+  "name": "webcontent",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -8,32 +8,18 @@
   "properties": {
     "id": {
       "type": "string",
-      "id": true,
-      "required": true
+      "required": true,
+      "id": true
     },
-    "link": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "updated": {
-      "type": "date",
-      "required": true
-    },
-    "created": {
-      "type": "date",
-      "required": true
-    },
-    "title": {
+    "content": {
       "type": "object",
       "required": true
     },
-    "description": {
-      "type": "object"
-    },
-    "category": {
-      "type": "string"
-    },
-    "event_date": {
+    "updated": {
       "type": "date",
       "required": true
     }
