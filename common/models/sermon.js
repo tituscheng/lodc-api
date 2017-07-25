@@ -63,7 +63,7 @@ module.exports = function(Sermon) {
       "scripture": scripture,
       "speaker": speaker,
       "date": new Date(date),
-      "medias": media,
+      "media": media,
       created: Date.now(),
       updated: Date.now()
     }, function(err, sermon) {
@@ -94,7 +94,7 @@ module.exports = function(Sermon) {
     Sermon.find({}, function(err, sermons){
       if(err) {
         logger.error("Sermon.find failed in Sermon.getSermons: ", err);
-      } 
+      }
       cb(null, {sermons:sermons});
     });
   }
